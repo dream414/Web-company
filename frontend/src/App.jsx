@@ -1,0 +1,79 @@
+import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Navbar from './Component/Navbar';
+import HeroSectionSingleRotate from './Component/HeroSectionSingleRotate';
+import About from './Component/About';
+import About2 from './Component/About2';
+import Skills from './Component/Skills';
+import ProgressMetrics from './Component/ProgressMatrics';
+import Slider from './Component/Slider';
+import Testimonials from './Component/Testimonials';
+import Services from './Component/Services';
+import Contribution from './Component/Contribution';
+import ContactSection from './Component/ContactSection';
+import Footer from './Component/Footer';
+import Project from './Component/Project';
+import LatestProject from './Component/LatestProject';
+
+/* Pages (ONE–ELEVEN) */
+import One from "./Pages/One";
+import Two from "./Pages/Two";
+import Three from "./Pages/Three";
+import Four from "./Pages/Four";
+import Five from "./Pages/Five";
+import Six from "./Pages/Six";
+import Seven from "./Pages/Seven";
+import Eight from "./Pages/Eight";
+import Nine from "./Pages/Nine";
+
+
+function App() {
+  return (
+    <BrowserRouter>
+
+      <Navbar />
+
+      <Routes>
+
+        {/* HOME – your existing layout */}
+        <Route
+          path="/"
+          element={
+            <>
+              <HeroSectionSingleRotate />
+              <About />
+              <About2 />
+              <Skills />
+              <ProgressMetrics />
+              <Project />
+              <LatestProject />
+              <Slider />
+              <Testimonials />
+              <Services />
+              <Contribution />
+              <ContactSection />
+              <Footer />
+            </>
+          }
+        />
+
+        {/* EXTRA ROUTES */}
+        <Route path="/one" element={<One />} />
+        <Route path="/two" element={<Two />} />
+        <Route path="/three" element={<Three />} />
+        <Route path="/four" element={<Four />} />
+        <Route path="/five" element={<Five />} />
+        <Route path="/six" element={<Six />} />
+        <Route path="/seven" element={<Seven />} />
+        <Route path="/eight" element={<Eight />} />
+        <Route path="/nine" element={<Nine />} />
+
+
+      </Routes>
+
+    </BrowserRouter>
+  );
+}
+
+export default App;
