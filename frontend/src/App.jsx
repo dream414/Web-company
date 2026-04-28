@@ -17,15 +17,15 @@ import Project from './Component/Project';
 import LatestProject from './Component/LatestProject';
 
 /* Pages (ONE–ELEVEN) */
-import One from "./Pages/One";
-import Two from "./Pages/Two";
-import Three from "./Pages/Three";
-import Four from "./Pages/Four";
-import Five from "./Pages/Five";
-import Six from "./Pages/Six";
-import Seven from "./Pages/Seven";
-import Eight from "./Pages/Eight";
-import Nine from "./Pages/Nine";
+import Gis from "./pages/gis";
+// import Two from "./Pages/Two";
+// import Three from "./Pages/Three";
+// import Four from "./Pages/Four";
+// import Five from "./Pages/Five";
+// import Six from "./Pages/Six";
+// import Seven from "./Pages/Seven";
+// import Eight from "./Pages/Eight";
+// import Nine from "./Pages/Nine";
 
 
 function App() {
@@ -59,15 +59,15 @@ function App() {
         />
 
         {/* EXTRA ROUTES */}
-        <Route path="/one" element={<One />} />
-        <Route path="/two" element={<Two />} />
+        <Route path="/gis" element={<Gis />} />
+        {/* <Route path="/two" element={<Two />} />
         <Route path="/three" element={<Three />} />
         <Route path="/four" element={<Four />} />
         <Route path="/five" element={<Five />} />
         <Route path="/six" element={<Six />} />
         <Route path="/seven" element={<Seven />} />
         <Route path="/eight" element={<Eight />} />
-        <Route path="/nine" element={<Nine />} />
+        <Route path="/nine" element={<Nine />} /> */}
 
 
       </Routes>

@@ -59,26 +59,33 @@ const fadeInUp = (delay = 0) => ({
           animate="visible"
           className="max-w-3xl mx-auto text-center mb-12 space-y-4"
         >
-          <motion.h2
+           <motion.h2
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="mb-20 text-4xl md:text-5xl font-extrabold text-white text-center"
+                      >    Let's Build Your Next Digital or Geospatial Solution
+                      </motion.h2>
+          {/* <motion.h2
             variants={fadeInUp(0)}
             className="text-3xl md:text-4xl font-bold mb-4 text-white"
           >
             Let's Build Your Next Digital or Geospatial Solution
-          </motion.h2>
+          </motion.h2> */}
 
           <motion.p
-            variants={fadeInUp(0.1)}
+            variants={fadeInUp(0)}
             className="text-lg text-white/90"
           >
             Whether you need a custom GIS dashboard, a 3D mapping tool, or a
             growth-focused website, we're here to turn your vision into reality.
           </motion.p>
 
-          {/* Gradient Hover Button */}
+          
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="relative group mx-auto flex items-center gap-2 rounded-full px-8 py-4 text-lg font-semibold text-white overflow-hidden"
+            className="relative group mx-auto flex items-center  border-2 border-green-300 gap-2 rounded-full px-8 py-4 text-lg font-semibold text-white overflow-hidden"
           >
             <span className="relative z-10">Let's Mapping</span>
 
@@ -179,13 +186,14 @@ const fadeInUp = (delay = 0) => ({
                   id="projectType"
                    value={formData.projectType} 
                    onChange={handleChange}
-                    className="flex h-10 w-full items-center rounded-md border border-white/40 bg-white/10 px-3 py-2 text-sm text-black placeholder:text-white/70 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:border-green-400 transition-all duration-300"
+                    className="flex h-10 w-full items-center rounded-md border border-white/40 bg-white/10 px-3 py-2 text-sm  focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:border-green-400 transition-all duration-300 bg-black"
                   >
-                    <option value="">Select project type</option>
-                    <option value="web">Web Development</option>
-                    <option value="gis">GIS Solutions</option>
-                    <option value="mobile">Mobile Apps</option>
-                    <option value="other">Other</option>
+                     <option className="bg-black" value="Select your project">Select your project</option>
+                    <option className="bg-black" value="UX UI Designing">UX UI Designing</option>
+                    <option   className="bg-black"value="Web Development">Web Development</option>
+                    <option  className="bg-black" value="GIS Solutions">GIS Solutions</option>
+                    <option  className="bg-black" value="Mobile Apps">Mobile Apps</option>
+                    <option   className="bg-black"value="Other">Other</option>
                   </select>
                 </motion.div>
 

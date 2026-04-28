@@ -18,8 +18,9 @@ export default function ProgressMetrics() {
   }, []);
 
   return (
-    <section className="py-20 bg-gray-900 text-white">
-      <div className="max-w-4xl mx-auto space-y-12 px-6">
+  <section className="p-5 bg-black">
+      <div className="max-w-5xl mx-auto space-y-12 px-6 relative bg-black">
+         <div className="absolute inset-0 bg-green-600/20 rounded-full blur-3xl"></div>
 
         {metrics.map((metric, idx) => (
           <motion.div
@@ -73,6 +74,6 @@ export default function ProgressMetrics() {
         ))}
 
       </div>
-    </section>
+</section>
   );
 }

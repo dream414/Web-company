@@ -65,8 +65,9 @@ const GBLandReform = ({ onBack }) => {
 
 
   return (
-    <section className="bg-black text-white min-h-screen px-6 py-20">
-      <div className="max-w-6xl mx-auto">
+    <section 
+     className="bg-black text-white min-h-screen px-6 py-20">
+      <div    className="max-w-6xl mx-auto">
 
         {/* Back Button */}
         <button onClick={onBack} className="  text-black  hover:shadow-[0_0_35px_10px_rgba(0,255,0,0.7)]  hover:bg-white mb-10 cursor-pointer font-bold p-3 text-xl bg-green-600 rounded-3xl ">
@@ -1088,8 +1089,14 @@ const LatestProject = memo(() => {
             exit={{ opacity: 0 }}
           >
             <div className="text-center mb-16">
-              <p className="text-green-400 mb-3">// Explore Work</p>
-              <h2 className="text-4xl font-semibold">A Showcase of My Latest Projects</h2>
+            <motion.h2
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="mb-20 text-4xl md:text-5xl font-extrabold text-white text-center"
+                      >
+                      A Showcase Of My Latest Project
+                      </motion.h2>
             </div>
 
             <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10">

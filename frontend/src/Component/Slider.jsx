@@ -39,9 +39,14 @@ export default function Slider() {
 
       {/* 🔽 Heading moved slightly down */}
       <div className="text-center mt-24 mb-16 max-w-3xl">
-        <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
-          MSP Collection
-        </h2>
+        <motion.h2
+                              initial={{ opacity: 0, y: 30 }}
+                              whileInView={{ opacity: 1, y: 0 }}
+                              transition={{ duration: 0.8 }}
+                              className="mb-20 text-4xl md:text-5xl font-extrabold text-green-400 text-center"
+                            >
+                           MPS Collection
+                            </motion.h2>
 
         {/* ⬜ White paragraph */}
         <p className="mt-6 text-lg text-white">

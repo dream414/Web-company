@@ -31,7 +31,14 @@ export default function About() {
         className="container px-4 mx-auto"
       >
         <div className="max-w-2xl mx-auto text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Who We Are</h2>
+        <motion.h2
+                     initial={{ opacity: 0, y: 30 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     transition={{ duration: 0.8 }}
+                     className="mb-20 text-4xl md:text-5xl font-extrabold text-green-400 text-center"
+                   >
+                  Who We Are
+                   </motion.h2>
           <p className="text-white/80">
             Web Collection Technology delivers smart GIS & AI-based geospatial
             solutions for real-world impact.
@@ -52,7 +59,7 @@ export default function About() {
               transition={{ type: "spring", stiffness: 200 }}
               className="relative group"
             >
-              <div className="relative z-10 rounded-2xl overflow-hidden border-4 border-green-500/40 shadow-lg bg-black group-hover:shadow-[0_0_35px_10px_rgba(0,255,0,0.7)] transition-all duration-300">
+              <div className="relative z-10 rounded-2xl overflow-hidden border-4 border-green-400 shadow-lg bg-black group-hover:shadow-[0_0_15px_6px_rgba(0,155,0,0.5)] transition-all duration-300">
                 <motion.img
                   src="./team pic.png"
                   alt="Team"
@@ -73,7 +80,7 @@ export default function About() {
                 viewport={{ once: true }}
                 className="relative group"
               >
-                <div className="bg-white/5 p-6 rounded-2xl border border-green-500/40 hover:shadow-[0_0_25px_8px_rgba(0,255,0,0.6)] transition-all">
+                <div className="bg-white/5 p-6 rounded-2xl border border-green-400 hover:shadow-[0_0_15px_6px_rgba(0,155,0,0.5)] transition-all">
                   <p className="text-green-300 font-medium mb-2">{title}</p>
                   <p className="text-white/70">
                     {title === "Our Vision"
@@ -98,12 +105,12 @@ export default function About() {
             viewport={{ once: true }}
             whileHover={{
               scale: 1.05,
-              boxShadow: "0 0 20px rgba(0,255,150,0.7)",
+              boxShadow: "0 0 15px rgba(0,155,150,0.6)",
             }}
-            className="bg-black/40 rounded-xl p-6 text-center border border-green-500/40"
+            className="bg-black/40 rounded-xl p-6 text-center border border-green-300/30"
           >
             <div className="text-3xl font-bold">{stat.value}</div>
-            <div className="text-green-200 text-sm">{stat.label}</div>
+            <div className="text-green-300 text-sm">{stat.label}</div>
           </motion.div>
         ))}
       </div>
@@ -121,7 +128,7 @@ export default function About() {
               whileHover={{ scale: 1.05 }}
               className="relative group"
             >
-              <div className="relative z-10 rounded-2xl overflow-hidden border-4 border-green-500/40 bg-black group-hover:shadow-[0_0_20px_10px_rgba(0,255,0,0.7)] transition-all duration-300">
+              <div className="relative z-10 rounded-2xl overflow-hidden border-4 border-green-500/40 bg-black group-hover:shadow-hover:shadow-[0_0_15px_6px_rgba(0,155,0,0.5)] transition-all duration-300">
                 <motion.img
                   src={box.img}
                   alt={box.text}

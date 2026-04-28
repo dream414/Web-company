@@ -112,7 +112,7 @@ export default function Contribution() {
                     className="w-24 h-24 mb-5 object-contain rounded-xl cursor-pointer
                     transition-all duration-300 border border-gray-600
                     hover:border-green-500
-                    hover:shadow-[0_0_20px_8px_rgba(110,231,183,0.5)]"
+                    hover:border-2"
                   />
 
                   {/* Stars */}

@@ -74,12 +74,13 @@ export default function Services() {
           className="max-w-3xl text-center mb-16"
         >
           <motion.h2
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 200 }}
-            className="inline-block mb-4 text-4xl md:text-5xl font-bold text-white"
-          >
-            Our Services
-          </motion.h2>
+                       initial={{ opacity: 0, y: 30 }}
+                       whileInView={{ opacity: 1, y: 0 }}
+                       transition={{ duration: 0.8 }}
+                       className="mb-20 text-4xl md:text-5xl font-extrabold text-white text-center"
+                     >
+                     Our Services
+                     </motion.h2>
 
           <motion.p
             initial={{ opacity: 0 }}

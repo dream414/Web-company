@@ -84,7 +84,8 @@ export default function Project() {
   const [active, setActive] = useState(null);
 
   return (
-    <section className="relative py-24 bg-black overflow-hidden flex justify-center">
+    <section  id="project"
+     className="relative py-24 bg-black overflow-hidden flex justify-center">
       <div className="absolute inset-0 bg-green-500/20 blur-[160px]" />
       <div className="container px-6 relative z-10 max-w-full">
 

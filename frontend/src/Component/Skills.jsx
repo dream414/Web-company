@@ -28,32 +28,35 @@ export default function About() {
   const storyText = "I thrive on solving real-world challenges through technology—whether it's using GIS to map land reforms, developing growth strategies for businesses, or consulting on community projects. You’ll find me launching new initiatives, collaborating with local governments, or exploring innovative ways to drive impact through data and development.";
 
   return (
-    <section className="relative bg-gray-900 text-white px-6 md:px-20 py-20 overflow-hidden">
+    <section className="relative px-6 md:px-20  py-20 overflow-hidden bg-black">
       {/* Animated green background glow */}
-      <div
+      {/* <div
         className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[800px] h-[800px] rounded-full blur-3xl animate-pulse-slow pointer-events-none"
         style={{ backgroundColor: "rgb(16, 185, 129)", opacity: 0.2 }}
-      ></div>
+      ></div> */}
 
       {/* Title */}
-      <motion.h2
-        className="text-3xl md:text-4xl font-bold mb-12 text-center tracking-wide"
-        style={{ color: "rgb(34, 197, 94)" }} // green-400 in rgb
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-      >
-        Skills
-      </motion.h2>
+       <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="mb-20 text-4xl md:text-5xl font-extrabold text-white text-center"
+            >
+              Skills
+            </motion.h2>
 
       {/* Skills Sections */}
-      <div className="grid md:grid-cols-3 gap-10 mb-16">
+      <div className="grid md:grid-cols-3 gap-10 mb-16  ">
+          {/* Glow Background */}
+   
         {Object.entries(skills).map(([category, items], idx) => (
           <motion.div
             key={category}
-            className="relative rounded-xl p-6 shadow-xl transition-all duration-500 overflow-hidden"
-            style={{ backgroundColor: "rgb(31, 41, 55)", border: "1px solid rgb(55, 65, 81)" }}
+            className="relative bg-black rounded-xl p-6 shadow-xl  transition-all duration-500 overflow-hidden  "
+            
+            style={{
+               backgroundColor: "rgb(31, 41, 55)",
+                border: "1px solid rgb(55, 65, 81)" }}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
@@ -62,12 +65,13 @@ export default function About() {
           >
             {/* Animated border */}
             <motion.div
-              className="absolute inset-0 rounded-xl pointer-events-none"
+              className="absolute  inset-0 rounded-xl pointer-events-none"
               style={{ border: "2px solid rgb(34, 197, 94)", opacity: 0.3 }}
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
             />
+               <div className="absolute inset-0 bg-green-600/20 rounded-full blur-3xl"></div>
 
             <h3
               className="text-xl font-semibold mb-4 capitalize border-b pb-2 relative z-10"
@@ -96,13 +100,14 @@ export default function About() {
 
       {/* Story Section */}
       <motion.div
-        className="rounded-xl p-10 text-center shadow-2xl transition-all duration-500 relative z-10  hover:shadow-[0_0_25px_8px_rgba(0,255,0,0.7)] border border-green-500/40 hover:cursor-pointer"
-        style={{ backgroundColor: "rgb(31, 41, 55)", border: "1px solid rgb(55, 65, 81)" }}
+        className="relative bg-black  rounded-xl p-10 text-center shadow-2xl transition-all duration-500 border-2 z-10 border border-green-400  hover:cursor-pointer"
+        style={{ backgroundColor: "rgb(31, 41, 55)" }}
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 1 }}
       >
+           <div className="absolute inset-0 bg-green-600/20 rounded-full blur-3xl"></div>
         <motion.p
           className="text-gray-200 md:text-lg leading-relaxed mb-6 flex flex-wrap justify-center"
           variants={typingVariants}
@@ -116,13 +121,13 @@ export default function About() {
           ))}
         </motion.p>
 
-        <motion.a
-          href="https://read.cv/explore"
+           <motion.a
+          href="/resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block px-10 py-3 rounded-full font-semibold text-gray-900 transition-all  hover:shadow-[0_0_25px_8px_rgba(0,255,0,0.7)] border border-green-500/40 hover:cursor-pointer"
-          style={{ backgroundColor: "rgb(34, 197, 94)" }}
-          whileHover={{ scale: 1.1, backgroundColor: "rgb(22, 163, 74)" }}
+          className="relative z-10 inline-block px-10 py-3 rounded-full font-semibold text-white 
+          bg-green-400 hover:bg-green-500 transition-all hover:shadow-[0_0_15px_6px_rgba(0,155,0,0.5)]]"
+          whileHover={{ scale: 1.1 }}
         >
           My Resume
         </motion.a>
