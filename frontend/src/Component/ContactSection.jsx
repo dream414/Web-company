@@ -192,7 +192,7 @@ const fadeInUp = (delay = 0) => ({
                     <option className="bg-black" value="UX UI Designing">UX UI Designing</option>
                     <option   className="bg-black"value="Web Development">Web Development</option>
                     <option  className="bg-black" value="GIS Solutions">GIS Solutions</option>
-                    <option  className="bg-black" value="Mobile Apps">Mobile Apps</option>
+                    <option  className="bg-black" value="Mobile Apps">Mobile App</option>
                     <option   className="bg-black"value="Other">Other</option>
                   </select>
                 </motion.div>
